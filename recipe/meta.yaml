@@ -1,4 +1,4 @@
-{% set version = "0.9" %}
+{% set version = "0.10" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/admisc_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/admisc/admisc_{{ version }}.tar.gz
-  sha256: 55e9e514e460e5cb4fe15efeefe609ac5fcdad2d079b94a369067f8e20962550
+  sha256: 666b83e362b4758efecb1bf6fa163968592e3e7b947e95148d616f7fc6bf0200
 
 build:
   merge_build_host: true  # [win]
@@ -35,12 +35,12 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=admisc
-  license: GPL-2
+  license: GPL-3.0-or-later
   summary: Contains functions used across packages 'QCA', 'DDIwR', and 'venn'. Interprets and translates SOP - Sum of Products expressions, for both binary and multi-value crisp sets, and extracts information (set names, set values) from those expressions. Other functions perform various other checks if possibly numeric
     (even if all numbers reside in a character vector) and coerce to numeric, or check if the numbers are whole. It also offers, among others, a highly flexible recoding function.
-  license_family: GPL2
+  license_family: GPL3
   license_file:
-    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:

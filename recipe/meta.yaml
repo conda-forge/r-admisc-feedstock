@@ -1,4 +1,4 @@
-{% set version = "0.20" %}
+{% set version = "0.21" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/admisc_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/admisc/admisc_{{ version }}.tar.gz
-  sha256: 8e9e106c789875da7ea27463d438a6fd4ac8219e79d3d5a265b4eb5ad2cd8af9
+  sha256: 25f35dd2ce7ee1a32704fa7b1614c48f427987fd3566ba6410c24a171c23d5a4
 
 build:
   merge_build_host: true  # [win]

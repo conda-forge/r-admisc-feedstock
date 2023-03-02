@@ -1,11 +1,11 @@
-About r-admisc
-==============
+About r-admisc-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-admisc-feedstock/blob/main/LICENSE.txt)
 
 Home: https://CRAN.R-project.org/package=admisc
 
 Package license: GPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-admisc-feedstock/blob/main/LICENSE.txt)
 
 Summary: Contains functions used across packages 'QCA', 'DDIwR', and 'venn'. Interprets and translates SOP - Sum of Products expressions, for both binary and multi-value crisp sets, and extracts information (set names, set values) from those expressions. Other functions perform various other checks if possibly numeric (even if all numbers reside in a character vector) and coerce to numeric, or check if the numbers are whole. It also offers, among others, a highly flexible recoding function.
 

@@ -1,4 +1,4 @@
-{% set version = "0.37" %}
+{% set version = "0.38" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/admisc_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/admisc/admisc_{{ version }}.tar.gz
-  sha256: 57741b29ed08285ac26331dc63d5c1a7c815245148ea2b8feb0fd5b2f8da3dae
+  sha256: c827a97677fdae37da13698c7d7674f60bf894b8ba7729d6a3f594765605bc53
 
 build:
   number: 0

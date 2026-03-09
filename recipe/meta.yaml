@@ -1,4 +1,4 @@
-{% set version = "0.39" %}
+{% set version = '0.39' %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -12,15 +12,26 @@ source:
   sha256: 153afa8dd3fc52fff73105e0d8877a866f7c2124ca01d3dfdae070ed7f4e21cc
 
 build:
-  number: 0
-  noarch: generic
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
+    - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
+    - {{ compiler('m2w64_c') }}        # [win]
+    - {{ posix }}filesystem        # [win]
+    - {{ posix }}make
+    - {{ posix }}sed               # [win]
+    - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
   run:
@@ -32,31 +43,41 @@ test:
     - "\"%R%\" -e \"library('admisc')\""  # [win]
 
 about:
-  home: https://CRAN.R-project.org/package=admisc
-  license: GPL-3.0-or-later
-  summary: Contains functions used across packages 'QCA', 'DDIwR', and 'venn'. Interprets and translates SOP - Sum of Products expressions, for both binary and multi-value crisp sets, and extracts information (set names, set values) from those expressions. Other functions perform various other checks if possibly numeric
-    (even if all numbers reside in a character vector) and coerce to numeric, or check if the numbers are whole. It also offers, among others, a highly flexible recoding function.
+  home: https://github.com/dusadrian/admisc
+  license: GPL-3.0-only
+  summary: |
+    Contains functions used across packages 'DDIwR', 'QCA' and 'venn'. Interprets and
+    translates, factorizes and negates SOP - Sum of Products expressions, for both binary
+    and multi-value crisp sets, and extracts information (set names, set values) from
+    those expressions. Other functions perform various other checks if possibly numeric
+    (even if all numbers reside in a character vector) and coerce to numeric, or check
+    if the numbers are whole. It also offers, among many others, a highly versatile
+    recoding routine and some more flexible alternatives to the base functions 'with()'
+    and 'within()'. SOP simplification functions in this package use related minimization
+    from package 'QCA', which is recommended to be installed despite not being listed
+    in the Imports field, due to circular dependency issues.
   license_family: GPL3
   license_file:
-    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
     - conda-forge/r
 
 # Package: admisc
-# Version: 0.5
-# Date: 2019-11-03
+# Version: 0.39
 # Title: Adrian Dusa's Miscellaneous
-# Authors@R: c(person("Adrian", "Dusa", role = c("aut", "cre", "cph"), email = "dusa.adrian@unibuc.ro"))
+# Authors@R: person( given = "Adrian", family = "Dusa", role = c("aut", "cre", "cph"), email = "dusa.adrian@unibuc.ro", comment = c(ORCID = "0000-0002-3525-9253"))
 # Depends: R (>= 3.5.0)
 # Imports: methods
-# Suggests: QCA
-# Description: Contains functions used across packages 'QCA', 'DDIwR', and 'venn'. Interprets and translates SOP - Sum of Products expressions, for both binary and multi-value crisp sets, and extracts information (set names, set values) from those expressions. Other functions perform various other checks if possibly numeric (even if all numbers reside in a character vector) and coerce to numeric, or check if the numbers are whole. It also offers, among others, a highly flexible recoding function.
-# License: GPL (>= 2)
-# NeedsCompilation: no
-# Packaged: 2019-11-03 11:38:33 UTC; dusadrian
-# Author: Adrian Dusa [aut, cre, cph]
+# Suggests: QCA (>= 3.7)
+# Description: Contains functions used across packages 'DDIwR', 'QCA' and 'venn'. Interprets and translates, factorizes and negates SOP - Sum of Products expressions, for both binary and multi-value crisp sets, and extracts information (set names, set values) from those expressions. Other functions perform various other checks if possibly numeric (even if all numbers reside in a character vector) and coerce to numeric, or check if the numbers are whole. It also offers, among many others, a highly versatile recoding routine and some more flexible alternatives to the base functions 'with()' and 'within()'. SOP simplification functions in this package use related minimization from package 'QCA', which is recommended to be installed despite not being listed in the Imports field, due to circular dependency issues.
+# License: GPL (>= 3)
+# URL: https://github.com/dusadrian/admisc
+# BugReports: https://github.com/dusadrian/admisc/issues
+# NeedsCompilation: yes
+# Packaged: 2025-10-31 16:52:48 UTC; dusadrian
+# Author: Adrian Dusa [aut, cre, cph] (ORCID: <https://orcid.org/0000-0002-3525-9253>)
 # Maintainer: Adrian Dusa <dusa.adrian@unibuc.ro>
 # Repository: CRAN
-# Date/Publication: 2019-11-03 12:10:02 UTC
+# Date/Publication: 2025-11-02 06:10:57 UTC

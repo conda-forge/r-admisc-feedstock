@@ -3,21 +3,108 @@ About r-admisc-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-admisc-feedstock/blob/main/LICENSE.txt)
 
-Home: https://CRAN.R-project.org/package=admisc
 
-Package license: GPL-3.0-or-later
+About r-admisc
+--------------
 
-Summary: Contains functions used across packages 'QCA', 'DDIwR', and 'venn'. Interprets and translates SOP - Sum of Products expressions, for both binary and multi-value crisp sets, and extracts information (set names, set values) from those expressions. Other functions perform various other checks if possibly numeric (even if all numbers reside in a character vector) and coerce to numeric, or check if the numbers are whole. It also offers, among others, a highly flexible recoding function.
+Home: https://github.com/dusadrian/admisc
+
+Package license: GPL-3.0-only
+
+Summary: Contains functions used across packages 'DDIwR', 'QCA' and 'venn'. Interprets and
+translates, factorizes and negates SOP - Sum of Products expressions, for both binary
+and multi-value crisp sets, and extracts information (set names, set values) from
+those expressions. Other functions perform various other checks if possibly numeric
+(even if all numbers reside in a character vector) and coerce to numeric, or check
+if the numbers are whole. It also offers, among many others, a highly versatile
+recoding routine and some more flexible alternatives to the base functions 'with()'
+and 'within()'. SOP simplification functions in this package use related minimization
+from package 'QCA', which is recommended to be installed despite not being listed
+in the Imports field, due to circular dependency issues.
+
+
+About r-admisc
+--------------
+
+Home: https://github.com/dusadrian/admisc
+
+Package license: GPL-3.0-only
+
+Summary: Contains functions used across packages 'DDIwR', 'QCA' and 'venn'. Interprets and
+translates, factorizes and negates SOP - Sum of Products expressions, for both binary
+and multi-value crisp sets, and extracts information (set names, set values) from
+those expressions. Other functions perform various other checks if possibly numeric
+(even if all numbers reside in a character vector) and coerce to numeric, or check
+if the numbers are whole. It also offers, among many others, a highly versatile
+recoding routine and some more flexible alternatives to the base functions 'with()'
+and 'within()'. SOP simplification functions in this package use related minimization
+from package 'QCA', which is recommended to be installed despite not being listed
+in the Imports field, due to circular dependency issues.
+
 
 Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table>
+    
+  <tr>
+    <td>Azure</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8711&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-admisc-feedstock?branchName=main">
-      </a>
+      <details>
+        <summary>
+          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8711&branchName=main">
+            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-admisc-feedstock?branchName=main">
+          </a>
+        </summary>
+        <table>
+          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
+          <tbody><tr>
+              <td>linux_64_r_base4.4</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8711&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-admisc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_r_base4.4" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_r_base4.5</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8711&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-admisc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_r_base4.5" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_r_base4.4</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8711&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-admisc-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_r_base4.4" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_r_base4.5</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8711&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-admisc-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_r_base4.5" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_r_base4.4</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8711&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-admisc-feedstock?branchName=main&jobName=win&configuration=win%20win_64_r_base4.4" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_r_base4.5</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8711&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-admisc-feedstock?branchName=main&jobName=win&configuration=win%20win_64_r_base4.5" alt="variant">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
     </td>
   </tr>
 </table>

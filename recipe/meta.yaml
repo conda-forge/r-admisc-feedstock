@@ -1,4 +1,4 @@
-{% set version = '0.39' %}
+{% set version = "0.40" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/admisc_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/admisc/admisc_{{ version }}.tar.gz
-  sha256: 153afa8dd3fc52fff73105e0d8877a866f7c2124ca01d3dfdae070ed7f4e21cc
+  sha256: 8cd9c5aa266239c835d2136500d1d98fc9019d76ed34ec4bd6c025b80ff41312
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/

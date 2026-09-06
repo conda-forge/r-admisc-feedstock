@@ -3,7 +3,7 @@
 
 package:
   name: r-admisc
-  version: {{ version|replace("-", "_") }}
+  version: "{{ version|replace("-", "_") }}"
 
 source:
   url:
@@ -44,7 +44,7 @@ test:
 
 about:
   home: https://github.com/dusadrian/admisc
-  license: GPL-3.0-only
+  license: GPL-3.0-or-later
   summary: |
     Contains functions used across packages 'DDIwR', 'QCA' and 'venn'. Interprets and
     translates, factorizes and negates SOP - Sum of Products expressions, for both binary

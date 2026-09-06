@@ -9,7 +9,7 @@ About r-admisc
 
 Home: https://github.com/dusadrian/admisc
 
-Package license: GPL-3.0-only
+Package license: GPL-3.0-or-later
 
 Summary: Contains functions used across packages 'DDIwR', 'QCA' and 'venn'. Interprets and
 translates, factorizes and negates SOP - Sum of Products expressions, for both binary
@@ -28,7 +28,7 @@ About r-admisc
 
 Home: https://github.com/dusadrian/admisc
 
-Package license: GPL-3.0-only
+Package license: GPL-3.0-or-later
 
 Summary: Contains functions used across packages 'DDIwR', 'QCA' and 'venn'. Interprets and
 translates, factorizes and negates SOP - Sum of Products expressions, for both binary

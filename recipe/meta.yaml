@@ -1,4 +1,4 @@
-{% set version = "0.40" %}
+{% set version = "0.41" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/admisc_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/admisc/admisc_{{ version }}.tar.gz
-  sha256: 8cd9c5aa266239c835d2136500d1d98fc9019d76ed34ec4bd6c025b80ff41312
+  sha256: af23278444140e9612ecf51d4075201711a1a97830388eb462819aa5dd094ac8
 
 build:
   number: 0
@@ -44,7 +44,7 @@ test:
 
 about:
   home: https://github.com/dusadrian/admisc
-  license: GPL-3.0-only
+  license: GPL-3.0-or-later
   summary: |
     Contains functions used across packages 'DDIwR', 'QCA' and 'venn'. Interprets and
     translates, factorizes and negates SOP - Sum of Products expressions, for both binary
